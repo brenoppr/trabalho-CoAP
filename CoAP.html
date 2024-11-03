@@ -22,10 +22,9 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><b>CoAP -<br>Constrained Application Protocol</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introdução</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
+    <a href="#glossario" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Glossário</a>
+    <a href="#introducao" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introdução</a> 
+    <a href="#arquitetura-funcionamento-coap" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Arquitetura e Funcionamento</a> 
     <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
   </div>
@@ -50,144 +49,91 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display=&#39;none&#39;">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
+  <!-- Glossário -->
+  <div class="w3-container" id="glossario" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Glossário</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Como este é um trabalho de Redes de Computadores, muitas siglas serão usadas para descrever protocolos e modelos ao longo do trabalho. Pensando em facilitar o entendimento do leitor, criamos uma pequena lista de termos relevantes com seus significados, que serão referenciados por meio de hiperlinks ao longo do texto:
+    </p>
+  <!-- Lista de termos do glossário -->
+  <div style="line-height: 1.6;">
+    <p id="CoAP"><b>CoAP</b><br>Tema do trabalho, protocolo de aplicação para dispositivos IoT que permite comunicação eficiente com baixa largura de banda.</p>
+
+    <p id="IoT"><b>IoT</b><br>Internet das Coisas: rede de dispositivos conectados que trocam dados via internet.</p>
+
+    <p id="UDP"><b>UDP</b><br>User Datagram Protocol: Protocolo de transporte orientado a datagramas que prioriza velocidade em vez de confiabilidade.</p>
+
+    <p id="TCP"><b>TCP</b><br>Transmission Control Protocol: protocolo de transporte que garante a entrega confiável de dados entre dispositivos na rede, corrigindo erros e retransmitindo pacotes quando necessário. Juntos, TCP e UDP são os protocolos mais usados e mais importantes na camada de transporte do modelo <a href="https://pt.wikipedia.org/wiki/TCP/IP">TCP/IP</a>.</p>
+
+
+    <p id="REST"><b>REST</b><br>Estilo de arquitetura para sistemas de software que define princípios de comunicação entre componentes de rede, podendo ser implementado com diversos protocolos, como HTTP, CoAP e MQTT.</p>
+
+    <p id="HTTP"><b>HTTP</b><br>Protocolo de transferência de hipertexto, principal protocolo de aplicação utilizado para comunicação na web.</p>
+
+    <p id="CoRE"><b>CoRE</b><br>Constrained RESTful Environments: iniciativa para adaptar o REST para ambientes com restrições, como dispositivos IoT.</p>
+
+    <p id="IETF"><b>IETF</b><br>Internet Engineering Task Force: organização que desenvolve padrões para a internet.</p>
+
+    <p id="RFC"><b>RFC</b><br>Request for Comments: documentos que definem padrões, práticas e protocolos para a internet, desenvolvidos e publicados pela IETF.</p>
+
+  </div>
   </div>
 
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
+
+
+  <!-- Introdução -->
+  <div class="w3-container" id="introducao" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Introdução</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>O CoAP é um protocolo de aplicação </p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <p>O <a href="#CoAP">CoAP</a> é um protocolo de aplicação projetado para ser utilizado em dispositivos com recursos limitados, como os encontrados em redes de <a href="#IoT">IoT</a>. Ele é baseado em <a href="#UDP">UDP</a>, sendo leve e eficiente em termos de consumo de energia e largura de banda. O CoAP segue o paradigma de comunicação cliente-servidor e utiliza uma estrutura <a href="#REST">REST</a>ful, semelhante ao <a href="#HTTP">HTTP</a>, mas otimizada para ambientes com restrições. </p>
+    <p>Este protocolo foi desenvolvido pelo grupo de trabalho <a href="#CoRE">CoRE</a> da <a href="#IETF">IETF</a> para atender às necessidades específicas de comunicação em redes de sensores, dispositivos embarcados e outras aplicações de IoT. Ele foi formalizado na <a href="#RFC">RFC</a> <a href="https://datatracker.ietf.org/doc/html/rfc7252">7252</a> em 2014, em um momento em que o crescimento da IoT demandava protocolos que fossem mais eficientes do que os tradicionais, como o HTTP, em termos de consumo de energia, capacidade de processamento e largura de banda. 
     </p>
+    <p>A criação do CoAP foi impulsionada pela necessidade de fornecer um protocolo que pudesse funcionar bem em redes com alta latência, baixa largura de banda e dispositivos com recursos limitados, algo que o <a href="#HTTP">HTTP</a> não conseguia oferecer de forma eficiente. O objetivo era permitir que dispositivos finais na rede pudessem comunicar-se de maneira confiável com servidores centrais ou uns com os outros, sem exigir o overhead que os protocolos convencionais traziam.</p>
+    <p>A principal diferença entre os dois protocolos está no fato do <a href="#HTTP">HTTP</a> funcionar sobre <a href="#TCP">TCP</a>, que, embora ofereça entrega confiável e orientada a conexão, aumenta o overhead devido ao controle de conexão e retransmissão de pacotes. Já o CoAP opera sobre o <a href="#UDP">UDP</a>, o que reduz o overhead e o torna mais leve e rápido em redes com restrições de recursos. Além disso, o CoAP suporta operações assíncronas nativamente, enquanto o HTTP depende de extensões como WebSocket para comportamento semelhante. Em resumo, o CoAP é otimizado para eficiência em energia e largura de banda, enquanto o HTTP foi projetado de forma mais generalista para redes robustas.</p>
+
   </div>
   
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>The best team in the world.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
-  </div>
+<!-- Arquitetura e Funcionamento do CoAP -->
+<div class="w3-container" id="arquitetura-funcionamento-coap" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Arquitetura e Funcionamento do CoAP</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <h3>Modelo de Comunicação (Cliente-Servidor, Assíncrono)</h3>
+  <p>O <a href="#CoAP">CoAP</a> segue o modelo tradicional de comunicação cliente-servidor, no qual o cliente faz requisições a um servidor, e o servidor responde com os dados solicitados ou uma confirmação de que a operação foi realizada. No entanto, o CoAP também permite interações assíncronas, possibilitando que clientes e servidores troquem mensagens sem a necessidade de manter uma conexão ativa durante toda a comunicação, o que é ideal para economizar banda e poder de processamento.</p>
+  <p>Como o CoAP utiliza <a href="#UDP">UDP</a> em vez de <a href="#TCP">TCP</a>, ele implementa um mecanismo próprio para garantir a confiabilidade das mensagens por meio de confirmações e retransmissões, se necessário. A comunicação pode ser confirmável (com a garantia de entrega) ou não confirmável (sem garantia de entrega, útil para economizar recursos em algumas situações).</p>
 
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="./CoAP_files/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO &amp; Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="./CoAP_files/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="./CoAP_files/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Packages / Pricing Tables -->
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">10 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">20% furniture discount</li>
-        <li class="w3-padding-16">Good deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 199</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
+  <h3>Estrutura de Mensagens (Formato e Tipos de Mensagem)</h3>
+  <p>As mensagens no CoAP são compactas e estruturadas de maneira a minimizar o overhead da comunicação. Cada mensagem é composta por quatro campos principais:</p>
+  <ul>
+    <li><b>Cabeçalho</b>: Inclui informações básicas como a versão do protocolo, tipo de mensagem, código (indicando a operação), e o ID da mensagem.</li>
+    <li><b>Tipo de Mensagem</b>: Existem quatro tipos principais de mensagens no CoAP:
+      <ul>
+        <li><b>Confirmável (CON)</b>: Exige confirmação de recebimento pelo destinatário. Caso a confirmação não seja recebida, a mensagem é retransmitida.</li>
+        <li><b>Não Confirmável (NON)</b>: Não exige confirmação, sendo usada para mensagens em que a confiabilidade não é crucial.</li>
+        <li><b>Acknowledgement (ACK)</b>: Confirma o recebimento de uma mensagem confirmável.</li>
+        <li><b>Reset (RST)</b>: Indica que uma mensagem foi recebida, mas não pode ser processada.</li>
       </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">50 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">50% furniture discount</li>
-        <li class="w3-padding-16">GREAT deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 249</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-    <form action="https://www.w3schools.com/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required="">
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required="">
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required="">
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
-    </form>  
-  </div>
+    </li>
+    <li><b>Código de Método</b>: Define a operação a ser realizada, como GET, POST, PUT ou DELETE.</li>
+    <li><b>Payload</b>: Contém os dados da mensagem (caso haja um payload) e é opcional.</li>
+  </ul>
+
+  <h3>Operações e Métodos (GET, POST, PUT, DELETE)</h3>
+  <p>O CoAP adota um modelo <a href="#REST">REST</a>ful similar ao <a href="#HTTP">HTTP</a>, utilizando métodos bem conhecidos para realizar operações sobre os recursos:</p>
+  <ul>
+    <li><b>GET</b>: Utilizado para recuperar informações sobre um recurso do servidor. Um exemplo prático seria obter o estado de um sensor em uma rede <a href="#IoT">IoT</a>.</li>
+    <li><b>POST</b>: Utilizado para criar novos recursos ou enviar dados ao servidor. Um cliente poderia usar o POST para enviar leituras de sensores para um servidor de monitoramento.</li>
+    <li><b>PUT</b>: Utilizado para atualizar ou substituir um recurso existente no servidor. É comum em operações de atualização de configurações ou estados de dispositivos.</li>
+    <li><b>DELETE</b>: Utilizado para remover um recurso do servidor.</li>
+  </ul>
+  <p>Como no HTTP, cada recurso é identificado por uma URI (Uniform Resource Identifier).</p>
+</div>
+
 
 <!-- End page content -->
 </div>
 
 <!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">2024.2</p></div>
 
 <script>
 // Script to open and close sidebar
