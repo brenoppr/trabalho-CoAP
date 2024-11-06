@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!-- saved from url=(0071)https://www.w3schools.com/w3css/tryw3css_templates_interior_design.htm# -->
 <html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>W3.CSS Template</title>
@@ -22,7 +22,6 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><b>CoAP -<br>Constrained Application Protocol</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#glossario" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Glossário</a>
     <a href="#introducao" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introdução</a> 
     <a href="#arquitetura-funcionamento-coap" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Arquitetura e Funcionamento</a>
     <a href="#recursos-caracteristicas-coap" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Recursos e Características</a>
@@ -31,6 +30,8 @@ body {font-size:16px;}
     <a href="#desempenho" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Desempenho e Comparação com Outros Protocolos</a>
     <a href="#implementacoes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Implementações e Ferramentas</a>
     <a href="#conclusao" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Conclusão</a>
+    <a href="#glossario" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Glossário</a>
+    <a href="#perguntas" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Perguntas</a>
     <a href="#referencias" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referências Bibliográficas</a>
 </div>
 
@@ -55,42 +56,6 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   
-  <!-- Glossário -->
-  <div class="w3-container" id="glossario" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Glossário</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Como este é um trabalho de Redes de Computadores, muitas siglas serão usadas para descrever protocolos e modelos ao longo do trabalho. Pensando em facilitar o entendimento do leitor, criamos uma pequena lista de termos relevantes com seus significados, que serão referenciados por meio de hiperlinks ao longo do texto:
-    </p>
-  <!-- Lista de termos do glossário -->
-  <div style="line-height: 1.6;">
-    <p id="CoAP"><b>CoAP</b><br>Tema do trabalho, protocolo de aplicação para dispositivos IoT que permite comunicação eficiente com baixa largura de banda.</p>
-
-    <p id="IoT"><b>IoT</b><br>Internet das Coisas: rede de dispositivos conectados que trocam dados via internet.</p>
-
-    <p id="UDP"><b>UDP</b><br>User Datagram Protocol: Protocolo de transporte orientado a datagramas que prioriza velocidade em vez de confiabilidade.</p>
-
-    <p id="TCP"><b>TCP</b><br>Transmission Control Protocol: protocolo de transporte que garante a entrega confiável de dados entre dispositivos na rede, corrigindo erros e retransmitindo pacotes quando necessário. Juntos, TCP e UDP são os protocolos mais usados e mais importantes na camada de transporte do modelo <a href="https://pt.wikipedia.org/wiki/TCP/IP">TCP/IP</a>.</p>
-
-
-    <p id="REST"><b>REST</b><br>Estilo de arquitetura para sistemas de software que define princípios de comunicação entre componentes de rede, podendo ser implementado com diversos protocolos, como HTTP, CoAP e MQTT.</p>
-
-    <p id="HTTP"><b>HTTP</b><br>Protocolo de transferência de hipertexto, principal protocolo de aplicação utilizado para comunicação na web.</p>
-
-    <p id="CoRE"><b>CoRE</b><br>Constrained RESTful Environments: iniciativa para adaptar o REST para ambientes com restrições, como dispositivos IoT.</p>
-
-    <p id="IETF"><b>IETF</b><br>Internet Engineering Task Force: organização que desenvolve padrões para a internet.</p>
-
-    <p id="RFC"><b>RFC</b><br>Request for Comments: documentos que definem padrões, práticas e protocolos para a internet, desenvolvidos e publicados pela IETF.</p>
-
-    <p id="TLS"><b>TLS</b><br>Protocolo de segurança que fornece criptografia, integridade de dados e autenticação para comunicações na Internet, utilizado para proteger a transferência de dados em aplicações como navegadores web e serviços de e-mail.</p>
-
-    <p id="smart-cities"><b>Smart Cities</b><br>Cidades que utilizam tecnologias da informação e comunicação (TIC) para melhorar a eficiência dos serviços urbanos e a qualidade de vida dos cidadãos, empregando dispositivos conectados e coleta de dados em tempo real para gerenciar recursos e oferecer serviços mais responsivos e sustentáveis.</p>
-    <p id="man-in-the-middle"><b>MITM</b><br>Tipo de ataque cibernético em que um invasor intercepta e potencialmente altera a comunicação entre duas partes sem que elas saibam, permitindo que o atacante escute ou manipule as informações trocadas.</p>
-  </div>
-  </div>
-
-
-
   <!-- Introdução -->
   <div class="w3-container" id="introducao" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Introdução</b></h1>
@@ -99,7 +64,17 @@ body {font-size:16px;}
     <p>Este protocolo foi desenvolvido pelo grupo de trabalho <a href="#CoRE">CoRE</a> da <a href="#IETF">IETF</a> para atender às necessidades específicas de comunicação em redes de sensores, dispositivos embarcados e outras aplicações de IoT. Ele foi formalizado na <a href="#RFC">RFC</a> <a href="https://datatracker.ietf.org/doc/html/rfc7252">7252</a> em 2014, em um momento em que o crescimento da IoT demandava protocolos que fossem mais eficientes do que os tradicionais, como o HTTP, em termos de consumo de energia, capacidade de processamento e largura de banda. 
     </p>
     <p>A criação do CoAP foi impulsionada pela necessidade de fornecer um protocolo que pudesse funcionar bem em redes com alta latência, baixa largura de banda e dispositivos com recursos limitados, algo que o <a href="#HTTP">HTTP</a> não conseguia oferecer de forma eficiente. O objetivo era permitir que dispositivos finais na rede pudessem comunicar-se de maneira confiável com servidores centrais ou uns com os outros, sem exigir o overhead que os protocolos convencionais traziam.</p>
+
+    <figure>
+      <img src="CoAP_files/arquitetura_coap.png" alt="Arquitetura do CoAP">
+      <figcaption><span> <b>Figura 1:</b></span> Arquitetura básica do CoAP</figcaption>
+      <figcaption><a href="https://www.researchgate.net/figure/An-overview-architecture-of-CoAP-protocol_fig1_331107756"><small><i>Obtido de researchgate.net</i></small></a></figcaption>
+    </figure>
+  
     <p>A principal diferença entre os dois protocolos está no fato do <a href="#HTTP">HTTP</a> funcionar sobre <a href="#TCP">TCP</a>, que, embora ofereça entrega confiável e orientada a conexão, aumenta o overhead devido ao controle de conexão e retransmissão de pacotes. Já o CoAP opera sobre o <a href="#UDP">UDP</a>, o que reduz o overhead e o torna mais leve e rápido em redes com restrições de recursos. Além disso, o CoAP suporta operações assíncronas nativamente, enquanto o HTTP depende de extensões como WebSocket para comportamento semelhante. Em resumo, o CoAP é otimizado para eficiência em energia e largura de banda, enquanto o HTTP foi projetado de forma mais generalista para redes robustas.</p>
+
+    <p>Como este é um trabalho de Redes de Computadores, muitas siglas serão usadas para descrever protocolos e modelos ao longo do trabalho. Pensando em facilitar o entendimento do leitor, criamos uma pequena lista de termos relevantes com seus significados, que serão referenciados por meio de hiperlinks ao longo do texto. Esta lista pode ser acessada na seção de <a href="#glossario">Glossário</a>.
+    </p>
 
   </div>
   
@@ -111,50 +86,90 @@ body {font-size:16px;}
   <p>O <a href="#CoAP">CoAP</a> segue o modelo tradicional de comunicação cliente-servidor, no qual o cliente faz requisições a um servidor, e o servidor responde com os dados solicitados ou uma confirmação de que a operação foi realizada. No entanto, o CoAP também permite interações assíncronas, possibilitando que clientes e servidores troquem mensagens sem a necessidade de manter uma conexão ativa durante toda a comunicação, o que é ideal para economizar banda e poder de processamento.</p>
   <p>Como o CoAP utiliza <a href="#UDP">UDP</a> em vez de <a href="#TCP">TCP</a>, ele implementa um mecanismo próprio para garantir a confiabilidade das mensagens por meio de confirmações e retransmissões, se necessário. A comunicação pode ser confirmável (com a garantia de entrega) ou não confirmável (sem garantia de entrega, útil para economizar recursos em algumas situações).</p>
 
-  <h3>Estrutura de Mensagens (Formato e Tipos de Mensagem)</h3>
-  <p>As mensagens no CoAP são compactas e estruturadas de maneira a minimizar o overhead da comunicação. Cada mensagem é composta por quatro campos principais:</p>
+  <h3>Estrutura de Mensagens CoAP</h3>
+  <p>O protocolo CoAP usa mensagens compactas, formadas por campos que permitem uma comunicação eficiente em redes de baixa largura de banda. As mensagens possuem os seguintes campos principais:</p>
   <ul>
-    <li><b>Cabeçalho</b>: Inclui informações básicas como a versão do protocolo, tipo de mensagem, código (indicando a operação), e o ID da mensagem.</li>
-    <li><b>Tipo de Mensagem</b>: Existem quatro tipos principais de mensagens no CoAP:
-      <ul>
-        <li><b>Confirmável (CON)</b>: Exige confirmação de recebimento pelo destinatário. Caso a confirmação não seja recebida, a mensagem é retransmitida.</li>
-        <li><b>Não Confirmável (NON)</b>: Não exige confirmação, sendo usada para mensagens em que a confiabilidade não é crucial.</li>
-        <li><b>Acknowledgement (ACK)</b>: Confirma o recebimento de uma mensagem confirmável.</li>
-        <li><b>Reset (RST)</b>: Indica que uma mensagem foi recebida, mas não pode ser processada.</li>
-      </ul>
-    </li>
-    <li><b>Código de Método</b>: Define a operação a ser realizada, como GET, POST, PUT ou DELETE.</li>
-    <li><b>Payload</b>: Contém os dados da mensagem (caso haja um payload) e é opcional.</li>
+      <li><b>Cabeçalho (4 bytes):</b> Contém informações básicas sobre a mensagem.
+          <ul>
+              <li><b>Versão (2 bits):</b> Indica a versão do protocolo. A versão atual é 1.</li>
+              <li><b>Tipo (2 bits):</b> Define o tipo de mensagem:
+                  <ul>
+                      <li><b>Confirmável (CON):</b> Requer confirmação de recebimento (ACK).</li>
+                      <li><b>Não Confirmável (NON):</b> Não requer confirmação.</li>
+                      <li><b>Acknowledgement (ACK):</b> Confirma o recebimento de uma mensagem CON.</li>
+                      <li><b>Reset (RST):</b> Indica que a mensagem não pôde ser processada.</li>
+                  </ul>
+              </li>
+              <li><b>Comprimento do Token (4 bits):</b> Define o tamanho do Token (0 a 8 bytes).</li>
+              <li><b>Código (8 bits):</b> Representa a operação (ex.: GET) ou a resposta (ex.: 2.05 para "Content").</li>
+              <li><b>ID da Mensagem (16 bits):</b> Identifica a mensagem para detectar duplicações.</li>
+          </ul>
+      </li>
+      <li><b>Token (0-8 bytes):</b> Usado para relacionar a resposta à requisição correspondente.</li>
+      <li><b>Opções:</b> Campos variáveis que fornecem informações adicionais, como URI e formato de conteúdo.</li>
+      <li><b>Carga Útil (Payload):</b> Dados transmitidos pela mensagem, precedidos por um marcador (0xFF) quando presentes.</li>
   </ul>
 
-  <h3>Operações e Métodos (GET, POST, PUT, DELETE)</h3>
-  <p>O CoAP adota um modelo <a href="#REST">REST</a>ful similar ao <a href="#HTTP">HTTP</a>, utilizando métodos bem conhecidos para realizar operações sobre os recursos:</p>
+  <figure>
+    <img src="CoAP_files/CoAP_header.png" alt="Cabeçalho do CoAP">
+    <figcaption><span> <b>Figura 2:</b></span> Cabeçalho do CoAP</figcaption>
+    <figcaption><a href="https://www.researchgate.net/figure/Message-header-in-CoAP-based-on-26_fig10_303524762"><small><i>Obtido de researchgate.net</i></small></a></figcaption>
+  </figure>
+
+
+  <h3>Operações e Métodos do CoAP</h3>
+  <p>O protocolo CoAP utiliza métodos semelhantes ao HTTP para realizar operações em recursos, que são identificados por uma URI (Identificador Uniforme de Recurso). Os métodos principais do CoAP são:</p>
+  
   <ul>
-    <li><b>GET</b>: Utilizado para recuperar informações sobre um recurso do servidor. Um exemplo prático seria obter o estado de um sensor em uma rede <a href="#IoT">IoT</a>.</li>
-    <li><b>POST</b>: Utilizado para criar novos recursos ou enviar dados ao servidor. Um cliente poderia usar o POST para enviar leituras de sensores para um servidor de monitoramento.</li>
-    <li><b>PUT</b>: Utilizado para atualizar ou substituir um recurso existente no servidor. É comum em operações de atualização de configurações ou estados de dispositivos.</li>
-    <li><b>DELETE</b>: Utilizado para remover um recurso do servidor.</li>
+    <li><strong>GET</strong>: Recupera informações de um recurso sem alterá-lo. Esse método é seguro e idempotente, ou seja, várias requisições têm o mesmo efeito de uma única.
+      <ul>
+        <li><em>Exemplo</em>: Obter a temperatura atual de um sensor.</li>
+      </ul>
+    </li>
+    <li><strong>POST</strong>: Envia dados ao servidor para serem processados. O comportamento do POST é definido pelo servidor e ele pode criar ou alterar recursos. Esse método não é idempotente.
+      <ul>
+        <li><em>Exemplo</em>: Enviar novas leituras de um sensor ao servidor.</li>
+      </ul>
+    </li>
+    <li><strong>PUT</strong>: Atualiza ou cria um recurso com os dados enviados. Esse método é idempotente, mas pode alterar o estado do recurso.
+      <ul>
+        <li><em>Exemplo</em>: Configurar a temperatura desejada de um termostato.</li>
+      </ul>
+    </li>
+    <li><strong>DELETE</strong>: Remove um recurso do servidor. Este método é idempotente, mas altera o estado do recurso.
+      <ul>
+        <li><em>Exemplo</em>: Remover um sensor da rede.</li>
+      </ul>
+    </li>
   </ul>
-  <p>Como no HTTP, cada recurso é identificado por uma URI (Uniform Resource Identifier).</p>
-</div>
+  
+  <h4>Outras Informações</h4>
+  <ul>
+    <li><strong>Opções de Requisição</strong>: O CoAP permite opções adicionais, como o formato do conteúdo (Content-Format) e validações de recursos.</li>
+    <li><strong>Códigos de Resposta</strong>: O servidor responde com códigos que indicam o sucesso ou erro da operação.</li>
+    <li><strong>Mapeamento para HTTP</strong>: O CoAP pode ser mapeado para HTTP, facilitando a integração com a web.</li>
+  </ul>
+  
+  
 
 <!-- Recursos e Características do CoAP -->
 <div class="w3-container" id="recursos-caracteristicas-coap" style="margin-top:75px">
   <h2 class="w3-xxxlarge w3-text-red"><b>Recursos e Características do CoAP</b></h2>
   <hr style="width:50px;border:5px solid red" class="w3-round">
+
   <h3>Gerenciamento de Recursos</h3>
-  <p>O <a href="#CoAP">CoAP</a> foi projetado para trabalhar de maneira eficiente com recursos limitados, como dispositivos de <a href="#IoT">IoT</a>. Cada recurso em um servidor CoAP é identificado por uma URI (Uniform Resource Identifier), assim como no <a href="#HTTP">HTTP</a>. No entanto, o CoAP é otimizado para redes com baixa largura de banda e alta latência, o que significa que os recursos são acessados de maneira eficiente, minimizando o overhead de comunicação. O CoAP também suporta cache, permitindo que clientes armazenem respostas para consultas futuras, o que reduz a quantidade de mensagens trocadas na rede.</p>
+  <p>O <a href="#CoAP">CoAP</a> (Constrained Application Protocol) é um protocolo projetado para dispositivos com recursos limitados, como os usados em <a href="#IoT">IoT</a> (Internet das Coisas). Cada recurso em um servidor CoAP é identificado por uma URI (Identificador Uniforme de Recurso), similar ao <a href="#HTTP">HTTP</a>, mas o CoAP foi otimizado para redes com baixa largura de banda e alta latência, minimizando o tráfego de comunicação. Ele também permite o uso de cache para que os clientes armazenem respostas e reduzam a necessidade de novas requisições, economizando recursos.</p>
 
-  <h3>Observação de Recursos (Resource Observation)</h3>
-  <p>Uma das características mais poderosas do CoAP é o suporte à observação de recursos. Isso permite que um cliente se inscreva para ser notificado sempre que o estado de um recurso mudar, sem a necessidade de enviar múltiplas requisições GET. Isso é especialmente útil em aplicações IoT, onde sensores podem enviar atualizações quando detectam uma mudança. O mecanismo de observação é implementado utilizando notificações assíncronas enviadas pelo servidor ao cliente, economizando largura de banda e recursos de processamento.</p>
+  <h3>Observação de Recursos</h3>
+  <p>O CoAP permite que clientes observem recursos, ou seja, que sejam notificados quando o estado de um recurso mudar. Isso elimina a necessidade de requisições repetidas para verificar atualizações. Esse mecanismo é útil em aplicações IoT, como sensores que enviam notificações apenas quando detectam alterações. O servidor envia notificações ao cliente de forma assíncrona, reduzindo o consumo de largura de banda e de energia dos dispositivos.</p>
 
-  <h3>Manipulação de Mensagens (Confirmáveis, Não Confirmáveis, Acknowledgments, Reset)</h3>
-  <p>O CoAP possui um mecanismo próprio para garantir a entrega confiável de mensagens, já que usa <a href="#UDP">UDP</a>, que não tem garantias de entrega como o <a href="#TCP">TCP</a>. O protocolo permite o envio de mensagens:</p>
+  <h3>Tipos de Mensagens e Confirmabilidade</h3>
+  <p>O CoAP utiliza <a href="#UDP">UDP</a>, que não garante entrega, mas ele oferece seu próprio mecanismo para maior confiabilidade, com quatro tipos de mensagens:</p>
   <ul>
-    <li><b>Confirmáveis (CON)</b>: Exigem que o destinatário envie uma confirmação (ACK) de que a mensagem foi recebida. Se o remetente não receber a confirmação, ele retransmite a mensagem até um limite de tentativas.</li>
-    <li><b>Não Confirmáveis (NON)</b>: Não exigem confirmação e são usadas em situações onde a confiabilidade não é crítica, como notificações de sensores que enviam dados periodicamente.</li>
-    <li><b>Acknowledgments (ACK)</b>: São respostas a mensagens confirmáveis, confirmando que a mensagem foi recebida corretamente.</li>
-    <li><b>Reset (RST)</b>: Usado quando uma mensagem recebida não pôde ser processada, indicando que o destinatário não entendeu ou não pôde lidar com a mensagem.</li>
+    <li><b>Confirmáveis (CON)</b>: Essas mensagens requerem uma confirmação (ACK) do destinatário. Se a confirmação não for recebida, o remetente retransmite a mensagem até atingir o limite de tentativas. Esse tipo é usado para dados importantes, onde a entrega precisa ser garantida.</li>
+    <li><b>Não Confirmáveis (NON)</b>: Não exigem confirmação, sendo ideais para dados que não requerem garantia de entrega, como leituras periódicas de sensores.</li>
+    <li><b>Acknowledgments (ACK)</b>: Confirmações enviadas em resposta a mensagens confirmáveis, informando que a mensagem foi recebida.</li>
+    <li><b>Reset (RST)</b>: Usado quando uma mensagem recebida não pôde ser processada, indicando que o destinatário não entendeu ou não conseguiu lidar com a mensagem.</li>
   </ul>
 </div>
 
@@ -163,43 +178,48 @@ body {font-size:16px;}
   <h2 class="w3-xxxlarge w3-text-red"><b>Segurança no CoAP</b></h2>
   <hr style="width:50px;border:5px solid red" class="w3-round">
   <h3>Implementação de DTLS (Datagram Transport Layer Security)</h3>
-  <p>O <a href="#CoAP">CoAP</a> utiliza o protocolo DTLS (Datagram Transport Layer Security) para garantir a segurança das comunicações. O DTLS é a versão do <a href="#TLS">TLS</a> (Transport Layer Security) adaptada para funcionar sobre o <a href="#UDP">UDP</a>, garantindo a integridade, confidencialidade e autenticação das mensagens trocadas no CoAP. Ele adiciona uma camada de criptografia e pode ser usado para evitar ataques de interceptação e adulteração de dados.</p>
+  <p>O <a href="#CoAP">CoAP</a> utiliza o protocolo DTLS (Datagram Transport Layer Security) para garantir a segurança das comunicações. O DTLS é a versão do <a href="#TLS">TLS</a> adaptada para funcionar sobre o <a href="#UDP">UDP</a>, garantindo a integridade, confidencialidade e autenticação das mensagens trocadas no CoAP. O DTLS usa algoritmos de criptografia para proteger o conteúdo das mensagens, garantindo que apenas os destinatários autorizados possam acessá-lo. Após a negociação de uma sessão segura, o cliente e o servidor compartilham uma chave de sessão, usada para criptografar e descriptografar os dados transmitidos. Isso impede que qualquer interceptador possa ler o conteúdo das mensagens. </p>
 
-  <h3>Autenticação e Criptografia</h3>
-  <p>Além da segurança oferecida pelo DTLS, o CoAP também suporta diferentes esquemas de autenticação, como o uso de certificados X.509 ou chaves pré-compartilhadas (PSK). Esses métodos garantem que apenas dispositivos autorizados podem se comunicar em uma rede CoAP, aumentando a segurança. A criptografia garante que os dados trafegados entre os dispositivos e servidores estejam protegidos contra ataques como o "man-in-the-middle".</p>
+  <p>Para verificar que as mensagens não foram alteradas durante a transmissão, o DTLS utiliza funções de hash (como SHA-256) em conjunto com um código de autenticação de mensagem (MAC, Message Authentication Code). Cada mensagem inclui um MAC que o destinatário pode verificar, comparando-o com o valor calculado para a mensagem recebida. Isso garante que, se a mensagem foi alterada, a verificação falhará, detectando a adulteração.</p>
 
-  <h3>Vantagens e Limitações de Segurança</h3>
-  <p>Uma das grandes vantagens do CoAP é o suporte nativo à segurança por meio do DTLS, que garante que as comunicações sejam seguras em redes com baixa potência e capacidade. No entanto, uma limitação é que a adição de DTLS pode aumentar a latência e o consumo de recursos, o que pode ser problemático para dispositivos extremamente limitados. Além disso, o DTLS é menos eficiente que o TLS em redes com alta perda de pacotes, o que pode afetar a performance em certos ambientes <a href="#IoT">IoT</a>.</p>
+  <p>O DTLS usa certificados digitais para autenticar os participantes da comunicação, garantindo que tanto o cliente quanto o servidor são quem dizem ser. No início da conexão, ocorre o processo de handshake, onde são trocadas informações para autenticação mútua.</p>
+
+  <p>Como o UDP não garante ordem ou entrega dos pacotes, o DTLS introduz números de sequência e retransmissão de pacotes perdidos. Cada mensagem é numerada, e o destinatário verifica a sequência ao receber, descartando pacotes duplicados e solicitando retransmissões quando necessário. Isso impede ataques de repetição (replay attacks), nos quais um invasor tenta retransmitir mensagens antigas para manipular a comunicação</p>
+
+  <p>O DTLS adapta o handshake do TLS, possibilitando a troca inicial de chaves e a autenticação. Durante o handshake, o DTLS lida com a possível perda de pacotes, incluindo retransmissões automáticas e controles para evitar inconsistências. Uma vez estabelecida a conexão, a chave de sessão resultante do handshake é usada para criptografar e autenticar as mensagens subsequentes.</p>
+  <figure>
+    <img src="CoAP_files/DTLS_handshake.png" alt="Cabeçalho do CoAP">
+    <figcaption><span> <b>Figura 3:</b></span> Visualização do procedimento de Handshake no DTLS</figcaption>
+    <figcaption><a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tsgu/7b1c3b62-c241-4a98-a3f3-6c393ceadfb4"><small><i>learn.microsoft.com</i></small></a></figcaption>
+  </figure>
+  <h3>Modos de Segurança do CoAP</h3>
+  <p>O CoAP oferece diferentes modos de segurança para proteger a comunicação entre dispositivos. Cada modo tem características próprias, e diz respeito principalmente aos metódos de autenticação que serão usados pelo DTLS:</p>
+  <ul>
+      <li><strong>Nosec:</strong> <em>Sem segurança</em> - Comunicação sem criptografia ou autenticação. Usado para cenários onde a segurança não é necessária ou já é implementada em uma camada mais baixa.</li>
+      <li><strong>PSK (Pre-Shared Key):</strong> <em>Chave pré-compartilhada</em> - Utiliza uma chave secreta compartilhada previamente entre as partes para autenticação e criptografia simples. Adequado para dispositivos com recursos limitados.</li>
+      <li><strong>Raw Public Key:</strong> <em>Chave pública bruta</em> - Baseado em chaves públicas sem a necessidade de certificados. Utiliza a criptografia assimétrica para autenticação, mas sem a infraestrutura de uma autoridade certificadora.</li>
+      <li><strong>Certificates:</strong> <em>Certificados X.509</em> - Utiliza certificados digitais para autenticação de ambos os lados e criptografia. Ideal para cenários mais complexos, onde a segurança é essencial e há infraestrutura de PKI (Public Key Infrastructure) disponível.</li>
+  </ul>
 </div>
 
 <!-- Aplicações e Casos de Uso do CoAP -->
 <div class="w3-container" id="aplicacoes-coap" style="margin-top:75px">
   <h2 class="w3-xxxlarge w3-text-red"><b>Aplicações e Casos de Uso do CoAP</b></h2>
   <hr style="width:50px;border:5px solid red" class="w3-round">
+
   <h3>Internet das Coisas (IoT)</h3>
-  <p>O <a href="#CoAP">CoAP</a> é amplamente utilizado em aplicações de <a href="#IoT">Internet das Coisas (IoT)</a> devido à sua eficiência energética e baixo consumo de largura de banda. Ele é ideal para dispositivos que precisam se comunicar em redes com recursos limitados, como sensores e atuadores que enviam pequenos pacotes de dados para servidores centrais ou entre si.</p>
+  <p>O <a href="#CoAP">CoAP</a> é amplamente adotado em soluções de <a href="#IoT">IoT</a>, principalmente devido à sua capacidade de operar eficientemente em redes com recursos limitados. Sua leveza e eficiência energética são características fundamentais para dispositivos IoT, que frequentemente operam em condições de baixa largura de banda e com restrições de poder computacional e armazenamento. O CoAP permite a comunicação eficiente entre sensores, atuadores e servidores, trocando pequenos pacotes de dados com baixo custo de transmissão, o que o torna uma escolha ideal para esse tipo de aplicação, onde a economia de energia e a minimização de tráfego de rede são essenciais.</p>
 
   <h3>Sensores e Dispositivos de Baixa Potência</h3>
-  <p>Sensores e dispositivos de baixa potência, como aqueles encontrados em redes de monitoramento ambiental ou de saúde, se beneficiam do CoAP por sua baixa sobrecarga e capacidade de funcionar em dispositivos com pouca capacidade de processamento e armazenamento. O CoAP também permite que esses dispositivos entrem em modo de economia de energia quando não estão enviando ou recebendo dados.</p>
+  <p>Dispositivos e sensores de baixa potência, como aqueles usados em sistemas de monitoramento ambiental ou dispositivos de saúde conectados, podem se beneficiar do CoAP. Sua arquitetura otimizada permite que esses dispositivos funcionem com eficiência, mesmo com restrições de processamento e memória. O CoAP facilita o funcionamento de sensores que medem variáveis como temperatura, umidade ou pressão, que enviam dados periódicos para servidores ou outros dispositivos. Além disso, o protocolo permite que esses dispositivos entrem em modos de economia de energia quando não estão em uso, o que é crucial em cenários de dispositivos móveis ou alimentados por baterias, prolongando significativamente sua vida útil e diminuindo a necessidade de manutenção.</p>
 
-  <h3>Smart Cities e Automação Residencial</h3>
-  <p>Em aplicações de <a href="#smart-cities">cidades inteligentes (smart cities)</a>, o CoAP pode ser usado para conectar sistemas de monitoramento de tráfego, iluminação pública, e até controle de qualidade do ar. Em automação residencial, ele permite o controle remoto de dispositivos domésticos, como termostatos, câmeras de segurança e fechaduras inteligentes, utilizando pouca energia e com alta eficiência.</p>
+  <h3>Cidades Inteligentes (Smart Cities) e Automação Residencial</h3>
+  <p>Em projetos de <a href="#smart-cities">cidades inteligentes</a>, o CoAP desempenha um papel fundamental ao conectar dispositivos e sistemas em uma infraestrutura urbana eficiente. Ele é utilizado em redes de monitoramento de tráfego, sistemas de iluminação pública inteligente, controle de qualidade do ar e até na gestão de resíduos urbanos. A capacidade de operar de maneira eficiente em redes com largura de banda limitada torna o CoAP ideal para cidades que buscam otimizar o uso de recursos e reduzir o consumo de energia.</p>
+  
+  <p>No contexto de automação residencial, o CoAP facilita o controle de dispositivos domésticos conectados, como termostatos, câmeras de segurança, fechaduras inteligentes e eletrodomésticos. Esses dispositivos, que exigem comunicação eficiente para proporcionar conforto e segurança, podem se beneficiar do CoAP pela sua leveza e eficiência no consumo de energia. Além disso, o CoAP permite a comunicação entre dispositivos em um ambiente doméstico sem sobrecarregar a rede, o que é essencial em casas com múltiplos dispositivos IoT interconectados.</p>
 </div>
 
-<!-- Desempenho e Comparação com Outros Protocolos -->
-<div class="w3-container" id="desempenho" style="margin-top:75px">
-  <h2 class="w3-xxxlarge w3-text-red"><b>Desempenho e Comparação com Outros Protocolos</b></h2>
-  <hr style="width:50px;border:5px solid red" class="w3-round">
-  <h3>Eficiência Energética e Consumo de Recursos</h3>
-  <p>O <a href="#CoAP">CoAP</a> é projetado para ser altamente eficiente em termos de consumo de energia, o que o torna ideal para dispositivos que operam com baterias. Comparado a outros protocolos, como <a href="#HTTP">HTTP</a> e <a href="#MQTT">MQTT</a>, o CoAP reduz o overhead de comunicação ao usar <a href="#UDP">UDP</a> e ao minimizar o tamanho das mensagens trocadas.</p>
 
-  <h3>Comparação com HTTP/2 em Cenários IoT</h3>
-  Embora o HTTP/2 introduza melhorias em relação ao HTTP/1.1, como a multiplexação de requisições, ele ainda tem uma sobrecarga considerável devido ao uso de TCP e suas garantias de entrega, o que o torna menos eficiente que o CoAP em redes de IoT.</p>
-
-  <h3>Limitações e Desafios do CoAP</h3>
-  <p>O CoAP, apesar de ser uma solução eficiente para dispositivos de <a href="#IoT">Internet das Coisas (IoT)</a> em ambientes restritos, apresenta algumas limitações e desafios. Um dos principais desafios é a sua segurança, especialmente em redes IoT, que são vulneráveis a ataques como <a href="#man-in-the-middle">man-in-the-middle</a> e injeção de pacotes. Outro desafio está relacionado à escalabilidade. Em redes com um número muito grande de dispositivos, o CoAP pode sofrer problemas de congestionamento devido à sua natureza baseada em datagramas e ao uso do protocolo UDP, que não possui mecanismos nativos para controle de fluxo, o que pode resultar em perdas de pacotes em redes sobrecarregadas.</p>
-  <p>Além disso, a interoperabilidade pode ser um obstáculo, pois, embora o CoAP tenha sido projetado para se integrar facilmente com HTTP e REST, garantir uma comunicação eficaz entre dispositivos CoAP e sistemas baseados em outras arquiteturas de rede ainda pode ser um desafio. Isso também implica na necessidade de gateways para traduzir as mensagens entre diferentes protocolos, o que pode adicionar latência e complexidade ao sistema.</p>
-</div>
 
 <!-- Implementações e Ferramentas -->
 <div class="w3-container" id="implementacoes" style="margin-top:75px">
@@ -237,6 +257,59 @@ body {font-size:16px;}
   <p>No contexto da Internet das Coisas, o CoAP continuará sendo uma peça-chave para habilitar a comunicação entre bilhões de dispositivos conectados, especialmente à medida que mais soluções de automação e monitoramento surgirem. Contudo, é essencial que futuros desenvolvimentos do protocolo abordem desafios como a interoperabilidade e a segurança para garantir sua adoção em larga escala.</p>
 </div>
 
+  <!-- Glossário -->
+  <div class="w3-container" id="glossario" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Glossário</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  <!-- Lista de termos do glossário -->
+  <div style="line-height: 1.6;">
+    <p id="CoAP"><b>CoAP</b><br>Tema do trabalho, protocolo de aplicação para dispositivos IoT que permite comunicação eficiente com baixa largura de banda.</p>
+
+    <p id="IoT"><b>IoT</b><br>Internet das Coisas: rede de dispositivos conectados que trocam dados via internet.</p>
+
+    <p id="UDP"><b>UDP</b><br>User Datagram Protocol: Protocolo de transporte orientado a datagramas que prioriza velocidade em vez de confiabilidade.</p>
+
+    <p id="TCP"><b>TCP</b><br>Transmission Control Protocol: protocolo de transporte que garante a entrega confiável de dados entre dispositivos na rede, corrigindo erros e retransmitindo pacotes quando necessário. Juntos, TCP e UDP são os protocolos mais usados e mais importantes na camada de transporte do modelo <a href="https://pt.wikipedia.org/wiki/TCP/IP">TCP/IP</a>.</p>
+
+
+    <p id="REST"><b>REST</b><br>Estilo de arquitetura para sistemas de software que define princípios de comunicação entre componentes de rede, podendo ser implementado com diversos protocolos, como HTTP, CoAP e MQTT.</p>
+
+    <p id="HTTP"><b>HTTP</b><br>Protocolo de transferência de hipertexto, principal protocolo de aplicação utilizado para comunicação na web.</p>
+
+    <p id="CoRE"><b>CoRE</b><br>Constrained RESTful Environments: iniciativa para adaptar o REST para ambientes com restrições, como dispositivos IoT.</p>
+
+    <p id="IETF"><b>IETF</b><br>Internet Engineering Task Force: organização que desenvolve padrões para a internet.</p>
+
+    <p id="RFC"><b>RFC</b><br>Request for Comments: documentos que definem padrões, práticas e protocolos para a internet, desenvolvidos e publicados pela IETF.</p>
+
+    <p id="TLS"><b>TLS</b><br>Protocolo de segurança que fornece criptografia, integridade de dados e autenticação para comunicações na Internet, utilizado para proteger a transferência de dados em aplicações como navegadores web e serviços de e-mail.</p>
+
+    <p id="smart-cities"><b>Smart Cities</b><br>Cidades que utilizam tecnologias da informação e comunicação (TIC) para melhorar a eficiência dos serviços urbanos e a qualidade de vida dos cidadãos, empregando dispositivos conectados e coleta de dados em tempo real para gerenciar recursos e oferecer serviços mais responsivos e sustentáveis.</p>
+  </div>
+  </div>
+
+ <div class="w3-container" id="perguntas" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Perguntas e Respostas sobre o CoAP</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+<div style="line-height: 1.6;">
+  <p><b>1 - Qual a principal diferença do CoAP para o HTTP, e qual o motivo desta diferença?</b><br>O HTTP utiliza o TCP enquanto o CoAP utiliza o UDP. O motivo do CoAP utilizar UDP é que com o UDP há um menor gasto de recursos com os mecanismos de funcionamento do TCP, que acrescentam muito overhead e podem sobrecarregar uma rede limitada em recursos.</p>
+
+  <p><b>2 - Quais os principais ambientes de uso do CoAP?</b><br> Em dispositivos IoT aplicações em ambientes com recursos restritos, como sensores, atuadores, dispositivos móveis e sistemas de controle remoto.</p>
+
+  <p><b>3 - Qual é o protocolo de segurança utilizado pelo CoAP e que serviços ele fornece?</b><br>O protocolo é o DTLS, que opera na camada de transporte e fornece confidencialidade, integridade e autenticação ao CoAP.</p>
+
+  <p><b>4 - Qual o modelo de comunicação do CoAP?</b><br>O CoAP utiliza um modelo cliente-servidor que pode ser síncrono (no caso do uso de mensagens confirmáveis) ou assíncrono.</p>
+
+  <p><b>5 - Quais os principais métodos do CoAP?</b><br>São métodos muito parecidos com os do HTTP, como GET, POST , PUT e DELETE.</p>
+
+</div>
+</div>
+
+
+
+
+
+  
 <!-- Referências Bibliográficas -->
 <div class="w3-container" id="referencias" style="margin-top:75px">
   <h2 class="w3-xxxlarge w3-text-red"><b>Referências Bibliográficas</b></h2>
